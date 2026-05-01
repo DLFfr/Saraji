@@ -14,12 +14,10 @@
 html{scroll-behavior:smooth}
 body{background:var(--night);color:var(--sand-pale);font-family:'Crimson Pro',serif;overflow-x:hidden}
 
-/* GRAIN */
 body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.03;
 background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
 background-size:200px 200px}
 
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.2rem 2rem;display:flex;justify-content:space-between;align-items:center;
 background:linear-gradient(to bottom,rgba(10,8,4,0.95),transparent);border-bottom:1px solid rgba(200,136,42,0.1)}
 .nav-logo{font-family:'Cinzel Decorative',serif;font-size:1.1rem;letter-spacing:.25em;color:var(--sand);text-decoration:none}
@@ -31,23 +29,18 @@ background:linear-gradient(to bottom,rgba(10,8,4,0.95),transparent);border-botto
 .nav-dot.active{background:var(--sand);border-color:var(--sand)}
 .nav-dot:hover::after{content:attr(data-label);position:absolute;right:14px;top:50%;transform:translateY(-50%);font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.1em;color:var(--sand);white-space:nowrap;background:rgba(10,8,4,0.9);padding:3px 8px;border:1px solid var(--border)}
 
-/* CANVAS */
 #particles{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.6}
 
-/* SECTIONS */
 section{position:relative;z-index:1;padding:6rem 2rem}
 .section-inner{max-width:1100px;margin:0 auto}
 .section-inner.narrow{max-width:800px}
 
-/* REVEAL */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
-/* SEPARATORS */
 .sep{width:100%;height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin:4rem 0}
 .sep-sm{width:120px;height:1px;background:linear-gradient(to right,var(--sand),var(--earth));margin:1rem 0 2rem}
 
-/* TYPOGRAPHY */
 h1.hero-title{font-family:'Cinzel Decorative',serif;font-size:clamp(3.5rem,10vw,8rem);letter-spacing:.3em;color:var(--sand);text-align:center;line-height:1;text-shadow:0 0 80px rgba(200,136,42,0.3)}
 h2.section-title{font-family:'Cinzel Decorative',serif;font-size:clamp(1.4rem,3vw,2.2rem);letter-spacing:.2em;color:var(--sand);margin-bottom:.5rem}
 h3.sub-title{font-family:'Cinzel',serif;font-size:1rem;letter-spacing:.2em;color:var(--sand-light);text-transform:uppercase;margin-bottom:1.5rem}
@@ -55,7 +48,6 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .quote{font-family:'Crimson Pro',serif;font-style:italic;font-size:1.4rem;color:var(--sand-light);line-height:1.6;border-left:2px solid var(--sand);padding-left:1.5rem;margin:2rem 0}
 .saraji-word{font-style:italic;color:var(--sand-light);letter-spacing:.1em;font-size:.95em}
 
-/* HERO */
 #hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 2rem;background:radial-gradient(ellipse at center,rgba(122,79,30,0.15) 0%,transparent 70%)}
 .hero-sub{font-family:'Cinzel',serif;font-size:clamp(.7rem,1.5vw,1rem);letter-spacing:.4em;color:var(--sand-light);text-transform:uppercase;margin-top:1.5rem;opacity:.9}
 .hero-quote{font-style:italic;font-size:clamp(.9rem,1.5vw,1.2rem);color:rgba(240,232,216,0.6);margin-top:2.5rem;max-width:600px;line-height:1.8}
@@ -64,13 +56,11 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .scroll-arr{width:1px;height:40px;background:linear-gradient(to bottom,var(--sand),transparent)}
 @keyframes pulse{0%,100%{opacity:.5;transform:translateY(0)}50%{opacity:1;transform:translateY(5px)}}
 
-/* HISTOIRE */
 #histoire{background:var(--night2)}
 .histoire-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
 .desert-ornament{display:flex;flex-direction:column;align-items:center;gap:1rem;opacity:.4;padding-top:2rem}
 .desert-ornament svg{width:100%;max-width:300px}
 
-/* IDENTITE */
 #identite{background:var(--night)}
 .identite-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:3rem}
 .identite-card{border:1px solid var(--border);background:var(--overlay);padding:2rem;position:relative;overflow:hidden;transition:border-color .3s}
@@ -81,7 +71,6 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .identite-card h4{font-family:'Cinzel',serif;font-size:.85rem;letter-spacing:.15em;color:var(--sand);text-transform:uppercase;margin-bottom:.75rem}
 .identite-card p{font-size:1rem;line-height:1.7;color:rgba(240,232,216,0.7);font-weight:300}
 
-/* RITUELS */
 #rituels{background:var(--night2)}
 .rituels-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:3rem}
 .rituel-card{border:1px solid var(--border);background:rgba(10,8,4,0.8);padding:2.5rem 2rem;text-align:center;transition:all .4s;cursor:default;position:relative}
@@ -90,7 +79,6 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .rituel-card h4{font-family:'Cinzel',serif;font-size:.9rem;letter-spacing:.15em;color:var(--sand-light);text-transform:uppercase;margin-bottom:1rem}
 .rituel-card p{font-size:.95rem;line-height:1.7;color:rgba(240,232,216,0.65);font-weight:300}
 
-/* RELATIONS */
 #relations{background:var(--night)}
 .clans-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:2rem}
 .clan-pill{border:1px solid var(--border);padding:1.2rem;text-align:center;transition:border-color .3s}
@@ -108,7 +96,6 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .apport-icon{font-size:1.2rem;flex-shrink:0;margin-top:.1rem}
 .apport-item p{font-size:.95rem;color:rgba(240,232,216,0.75);line-height:1.5;font-weight:300}
 
-/* OBJECTIFS */
 #objectifs{background:var(--night2)}
 .obj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
 .obj-col{border-top:2px solid var(--border)}
@@ -117,10 +104,9 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .obj-col-header h4{font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.2em;color:var(--sand);text-transform:uppercase}
 .obj-list{list-style:none;display:flex;flex-direction:column;gap:.75rem}
 .obj-list li{font-size:.9rem;line-height:1.6;color:rgba(240,232,216,0.7);padding-left:1.2rem;position:relative;font-weight:300}
-.obj-list li::before{content:'—';position:absolute;left:0;color:var(--earth)}
+.obj-list li::before{content:'·';position:absolute;left:0;color:var(--earth)}
 .obj-footer-quote{font-style:italic;font-size:1rem;color:rgba(200,136,42,0.7);text-align:center;margin-top:3rem;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.8}
 
-/* PERSONNAGES */
 #personnages{background:var(--night)}
 .perso-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:3rem}
 .perso-card{border:1px solid var(--border);background:rgba(15,12,7,0.9);overflow:hidden;cursor:pointer;transition:border-color .3s;position:relative}
@@ -145,7 +131,6 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .obj-horizon ul li{font-size:.85rem;color:rgba(240,232,216,0.65);padding-left:1rem;position:relative;line-height:1.6;font-weight:300}
 .obj-horizon ul li::before{content:'·';position:absolute;left:0;color:var(--earth)}
 
-/* HRP */
 #hrp{background:var(--night2)}
 .hrp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;margin-top:3rem}
 .hrp-card{border:1px solid rgba(200,136,42,0.15);padding:1.8rem;background:rgba(10,8,4,0.6)}
@@ -154,12 +139,10 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .hrp-tag{display:inline-block;font-size:.7rem;background:rgba(200,136,42,0.1);border:1px solid var(--border);color:var(--sand-light);padding:.2rem .5rem;margin:.2rem .2rem 0 0;font-family:'Cinzel',serif;letter-spacing:.08em}
 .hrp-bio{font-size:.85rem;color:rgba(240,232,216,0.6);margin-top:.8rem;line-height:1.6;font-weight:300;border-top:1px solid rgba(200,136,42,0.1);padding-top:.8rem}
 
-/* FOOTER */
 footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);background:var(--night)}
 footer .footer-logo{font-family:'Cinzel Decorative',serif;font-size:1.5rem;letter-spacing:.3em;color:var(--sand);display:block;margin-bottom:.8rem}
 footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:rgba(200,136,42,0.4);text-transform:uppercase}
 
-/* RESPONSIVE */
 @media(max-width:768px){
   .histoire-grid{grid-template-columns:1fr}.desert-ornament{display:none}
   .obj-grid{grid-template-columns:1fr}
@@ -173,7 +156,6 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
   section{padding:4rem 1.2rem}
 }
 
-/* HIGHLIGHT LINE */
 .highlight-line{display:block;width:100%;height:1px;background:linear-gradient(to right,transparent,rgba(200,136,42,0.4),transparent);margin:3rem 0}
 </style>
 </head>
@@ -216,13 +198,13 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
         <div class="sep-sm"></div>
         <p class="body">Dans le désert profond, là où les cartes s'arrêtent et où le soleil tue, une tribu a survécu depuis des temps immémoriaux. Les Saraji ne comptent pas les années. <strong style="color:var(--sand-light);font-weight:400">Ils comptent les tempêtes.</strong></p>
         <br>
-        <p class="body">Ils n'ont jamais construit en pierre. Jamais tracé de frontières. Jamais eu de chef désigné par le sang. Ce qui leur a permis de survivre là où tout meurt, c'est une osmose totale avec le désert — ils sentent une tempête deux jours avant qu'elle frappe, trouvent de l'eau là où le sable semble mort depuis des siècles.</p>
+        <p class="body">Ils n'ont jamais construit en pierre. Jamais tracé de frontières. Jamais eu de chef désigné par le sang. Ce qui leur a permis de survivre là où tout meurt, c'est une osmose totale avec le désert : ils sentent une tempête deux jours avant qu'elle frappe, trouvent de l'eau là où le sable semble mort depuis des siècles.</p>
         <br>
-        <p class="body">Depuis des générations, leur route longe Suna — le seul point d'eau stable à trois jours de marche. Des shinobi se sont assis autour de leurs feux. Des enfants ont grandi dans les deux mondes. Ce n'est pas une alliance formelle. Pas un traité.</p>
+        <p class="body">Depuis des générations, leur route longe Suna, seul point d'eau stable à trois jours de marche. Des shinobi se sont assis autour de leurs feux. Des enfants ont grandi dans les deux mondes. Ce n'est pas une alliance formelle. Pas un traité.</p>
         <br>
-        <div class="quote reveal">"Quelque chose de plus ancien et de plus solide — deux peuples qui se sont fréquentés si longtemps qu'ils ont fini par se mélanger sans le décider."</div>
+        <div class="quote reveal">"Quelque chose de plus ancien et de plus solide. Deux peuples qui se sont fréquentés si longtemps qu'ils ont fini par se mélanger sans le décider."</div>
         <br>
-        <p class="body">Les cinq frères et sœurs sont la première génération confiée à Suna dès l'enfance — l'académie le jour, les rituels le soir. Ils n'ont aucun souvenir conscient du désert profond. Pourtant, quand le vent change de direction au milieu d'une mission, quelque chose en eux le sent avant que leur cerveau le formule.</p>
+        <p class="body">Les cinq frères et sœurs sont la première génération confiée à Suna dès l'enfance. L'académie le jour, les rituels le soir. Ils n'ont aucun souvenir conscient du désert profond. Pourtant, quand le vent change de direction au milieu d'une mission, quelque chose en eux le sent avant que leur cerveau le formule.</p>
         <br>
         <p class="body"><em style="color:var(--sand-light)">Pas des exilés. Pas des assimilés. Quelque chose de nouveau.</em></p>
       </div>
@@ -243,7 +225,6 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
           <circle cx="130" cy="320" r="3" fill="rgba(200,136,42,0.4)"/>
           <circle cx="50" cy="200" r="3" fill="rgba(200,136,42,0.4)"/>
           <circle cx="210" cy="200" r="3" fill="rgba(200,136,42,0.4)"/>
-          <!-- dune lines -->
           <path d="M 10 340 Q 65 310 130 325 Q 195 340 250 315" stroke="rgba(200,136,42,0.2)" stroke-width="0.8" fill="none"/>
           <path d="M 10 355 Q 65 325 130 340 Q 195 355 250 330" stroke="rgba(200,136,42,0.15)" stroke-width="0.5" fill="none"/>
           <path d="M 10 370 Q 65 340 130 355 Q 195 370 250 345" stroke="rgba(200,136,42,0.1)" stroke-width="0.5" fill="none"/>
@@ -265,12 +246,12 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
       <div class="identite-card reveal">
         <span class="identite-icon">◈</span>
         <h4>Connexion au désert</h4>
-        <p>Osmose totale avec le désert profond. Ils lisent le vent comme d'autres lisent une carte. Cette connexion n'est pas un talent — c'est une discipline transmise depuis des générations.</p>
+        <p>Osmose totale avec le désert profond. Ils lisent le vent comme d'autres lisent une carte. Cette connexion n'est pas un talent, c'est une discipline transmise depuis des générations.</p>
       </div>
       <div class="identite-card reveal">
         <span class="identite-icon">◎</span>
         <h4>Le Senjutsu Saraji</h4>
-        <p>Une énergie naturelle aride, patiente, implacable. Rien à voir avec Myōboku ou Ryūchi. Progression longue gagnée en RP — la direction artistique centrale du clan.</p>
+        <p>Une énergie naturelle aride, patiente, implacable. Rien à voir avec Myōboku ou Ryūchi. Progression longue gagnée en RP, direction artistique centrale du clan.</p>
       </div>
       <div class="identite-card reveal">
         <span class="identite-icon">✦</span>
@@ -281,9 +262,9 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
         <span class="identite-icon">◉</span>
         <h4>Le Dialecte</h4>
         <p>Trois mots, trois contextes précis :<br>
-        <span class="saraji-word">Khal'shai</span> — avant le combat.<br>
-        <span class="saraji-word">Iru'shai</span> — le serment immuable.<br>
-        <span class="saraji-word">Iru-Saraji</span> — au groupe, avant de partir.</p>
+        <span class="saraji-word">Khal'shai</span>, avant le combat.<br>
+        <span class="saraji-word">Iru'shai</span>, le serment immuable.<br>
+        <span class="saraji-word">Iru-Saraji</span>, au groupe, avant de partir.</p>
       </div>
     </div>
   </div>
@@ -295,7 +276,7 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
     <div class="reveal">
       <h2 class="section-title">Les Rituels</h2>
       <div class="sep-sm"></div>
-      <p class="body" style="max-width:700px">La spiritualité Saraji n'est pas une religion — c'est une lecture du monde. Les morts ne disparaissent pas. Ils deviennent sable, ils deviennent vent.</p>
+      <p class="body" style="max-width:700px">La spiritualité Saraji n'est pas une religion, c'est une lecture du monde. Les morts ne disparaissent pas. Ils deviennent sable, ils deviennent vent.</p>
     </div>
     <div class="rituels-grid">
       <div class="rituel-card reveal">
@@ -306,17 +287,17 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
       <div class="rituel-card reveal">
         <span class="rituel-symbol">🔥</span>
         <h4>Le Feu de Vérité</h4>
-        <p>Une fois par lune. Chacun dit une chose vraie qu'il n'a pas dite dans la semaine — dans le feu, sans réponse autorisée. Sur un toit de Suna avec le bruit de la ville en dessous, ça prend une résonance particulière.</p>
+        <p>Une fois par lune. Chacun dit une chose vraie qu'il n'a pas dite dans la semaine, dans le feu, sans réponse autorisée. Sur un toit de Suna avec le bruit de la ville en dessous, ça prend une résonance particulière.</p>
       </div>
       <div class="rituel-card reveal">
         <span class="rituel-symbol">🌀</span>
         <h4>La Lecture du Sable</h4>
-        <p>Avant une décision importante, on verse du sable et on observe les formes. Il y a une grammaire là-dedans. Tout le monde ne la lit pas pareil — source de débats qui durent depuis l'enfance.</p>
+        <p>Avant une décision importante, on verse du sable et on observe les formes. Il y a une grammaire là-dedans. Tout le monde ne la lit pas pareil, source de débats qui durent depuis l'enfance.</p>
       </div>
       <div class="rituel-card reveal">
         <span class="rituel-symbol">💀</span>
         <h4>L'Appel aux Anciens</h4>
-        <p>En cas de crise, on parle à voix basse à un ancêtre précis. On écoute le vent. On interprète. À Suna il y a beaucoup de bruit — certains pensent que ça brouille les voix, d'autres que ça les force à parler plus clairement.</p>
+        <p>En cas de crise, on parle à voix basse à un ancêtre précis. On écoute le vent. On interprète. À Suna il y a beaucoup de bruit. Certains pensent que ça brouille les voix, d'autres que ça les force à parler plus clairement.</p>
       </div>
     </div>
   </div>
@@ -338,7 +319,7 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
       </div>
       <div class="clan-pill prudent">
         <h5>Hoki</h5>
-        <p class="clan-tone">Prudence — savoir suspect</p>
+        <p class="clan-tone">Prudence, savoir suspect</p>
         <div class="clan-dot"></div>
       </div>
       <div class="clan-pill potentiel">
@@ -348,12 +329,12 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
       </div>
       <div class="clan-pill observateur">
         <h5>Roran</h5>
-        <p class="clan-tone">Respect — en deuil</p>
+        <p class="clan-tone">Respect, en deuil</p>
         <div class="clan-dot"></div>
       </div>
       <div class="clan-pill naturel">
         <h5>Sabaku</h5>
-        <p class="clan-tone">Proximité naturelle — désert partagé</p>
+        <p class="clan-tone">Proximité naturelle, désert partagé</p>
         <div class="clan-dot"></div>
       </div>
     </div>
@@ -364,23 +345,23 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
     <div class="apports-list reveal">
       <div class="apport-item">
         <span class="apport-icon">🩺</span>
-        <p>Médecine de terrain après chaque incident — là où la médecine officielle ne va pas.</p>
+        <p>Médecine de terrain après chaque incident, là où la médecine officielle ne va pas.</p>
       </div>
       <div class="apport-item">
         <span class="apport-icon">🕸️</span>
-        <p>Réseau social dense — capital de services et de dettes mutuelles dans tout le village.</p>
+        <p>Réseau social dense, capital de services et de dettes mutuelles dans tout le village.</p>
       </div>
       <div class="apport-item">
         <span class="apport-icon">⚔️</span>
-        <p>Doctrine tactique désert — lecture du terrain que personne d'autre à Suna ne possède.</p>
+        <p>Doctrine tactique désert, lecture du terrain que personne d'autre à Suna ne possède.</p>
       </div>
       <div class="apport-item">
         <span class="apport-icon">🌙</span>
-        <p>Espace spirituel et philosophique — les Veillées du Sable, le Feu de Vérité ouvert au village.</p>
+        <p>Espace spirituel et philosophique, les Veillées du Sable, le Feu de Vérité ouvert au village.</p>
       </div>
       <div class="apport-item">
         <span class="apport-icon">🔍</span>
-        <p>Veille extérieure — les seuls shinobi de Suna qui lisent vraiment ce qui vient du désert profond.</p>
+        <p>Veille extérieure, les seuls shinobi de Suna qui lisent vraiment ce qui vient du désert profond.</p>
       </div>
     </div>
   </div>
@@ -392,7 +373,7 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
     <div class="reveal">
       <h2 class="section-title">La Voie</h2>
       <div class="sep-sm"></div>
-      <p class="body" style="max-width:650px">Trois horizons. Un projet collectif construit brique par brique, en jeu, par les actes — jamais par la demande.</p>
+      <p class="body" style="max-width:650px">Trois horizons. Un projet collectif construit brique par brique, en jeu, par les actes. Jamais par la demande.</p>
     </div>
     <div class="obj-grid reveal">
       <div class="obj-col">
@@ -415,9 +396,9 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
         </div>
         <ul class="obj-list">
           <li>Réseau de veille centralisé sur tout ce qui vient du désert</li>
-          <li>Confrontation institutionnelle sur la médecine — cas public</li>
+          <li>Confrontation institutionnelle sur la médecine, cas public</li>
           <li>Trois alliances politiques actives avec obligations mutuelles</li>
-          <li>Progression vers le Senjutsu — visible et désirable pour le village</li>
+          <li>Progression vers le Senjutsu, visible et désirable pour le village</li>
           <li>Place négociée dans les décisions stratégiques désert de Suna</li>
         </ul>
       </div>
@@ -429,7 +410,7 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
         <ul class="obj-list">
           <li>Méthodes Saraji intégrées à la section médicale officielle</li>
           <li>Doctrine désert adoptée dans la stratégie militaire de Suna</li>
-          <li>Le Senjutsu Saraji — voie formalisée et transmissible</li>
+          <li>Le Senjutsu Saraji, voie formalisée et transmissible</li>
           <li>Cours de survie désert au programme de l'Académie</li>
           <li>Reconnaissance comme clan officiel de Suna</li>
         </ul>
@@ -456,21 +437,21 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
           <h3>La Tête Brûlée</h3>
           <p class="perso-role">Le réseau. Le liant.</p>
           <div class="perso-keywords"><span>Racaille poli</span><span>Impulsif</span><span>Stratège social</span></div>
-          <p class="perso-excerpt">Le plus Suna des cinq en surface — et c'est une façade à moitié consciente. Des manières, un sourire qui arrive trop vite, et deux minutes plus tard quelque chose d'impulsif qui détruit la moitié de ce qu'il vient de construire. L'apologie arrive immédiatement, sincère, légèrement excessive.</p>
+          <p class="perso-excerpt">Le plus Suna des cinq en surface, et c'est une façade à moitié consciente. Des manières, un sourire qui arrive trop vite, et deux minutes plus tard quelque chose d'impulsif qui détruit la moitié de ce qu'il vient de construire. L'apologie arrive immédiatement, sincère, légèrement excessive.</p>
           <div class="perso-expand-toggle">Voir le détail <span class="arr">↓</span></div>
         </div>
         <div class="perso-expand">
           <p class="perso-section-title">Direction artistique</p>
           <p>Tenue shinobi ni trop propre ni trop abîmée. Une marque Saraji visible dans le cou, une autre sur le poignet. Il occupe l'espace sans le calculer. Quand il est assis à une table de négociation, il a l'air trop grand pour la chaise.</p>
           <p class="perso-section-title">Caractère</p>
-          <p>Il rend des services — beaucoup, à beaucoup de monde. Pas par altruisme : par investissement social. Chaque service rendu est une dette qui dort. Ce système de troc informel est sa façon naturelle de naviguer le monde. Avec sa famille, l'impulsivité disparaît. Il devient précis, calme, redoutable.</p>
+          <p>Il rend des services, beaucoup, à beaucoup de monde. Pas par altruisme : par investissement social. Chaque service rendu est une dette qui dort. Ce système de troc informel est sa façon naturelle de naviguer le monde. Avec sa famille, l'impulsivité disparaît. Il devient précis, calme, redoutable.</p>
           <div class="obj-horizon">
             <h5>Court terme</h5>
             <ul><li>S'établir comme la petite main incontournable du village</li><li>Lancer un système de troc informel entre joueurs</li><li>Cartographier le réseau social de Suna</li></ul>
             <h5>Mid terme</h5>
             <ul><li>Négocier et signer un accord formel avec une institution</li><li>Représenter la famille dans une négociation politique difficile</li></ul>
             <h5>Long terme</h5>
-            <ul><li>Être reconnu comme diplomate de référence par la hiérarchie</li><li>Avoir traversé une trahison — subie ou commise — et ce qu'il en reste</li></ul>
+            <ul><li>Être reconnu comme diplomate de référence par la hiérarchie</li><li>Avoir traversé une trahison, subie ou commise, et ce qu'il en reste</li></ul>
           </div>
         </div>
       </div>
@@ -482,14 +463,14 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
           <h3>Le Soignant</h3>
           <p class="perso-role">La pharmacopée. Le terrain.</p>
           <div class="perso-keywords"><span>Plantes rares</span><span>Friction institutionnelle</span><span>Chercheur</span></div>
-          <p class="perso-excerpt">Il ne s'installe pas dans un cabinet et n'attend pas. Après chaque mission difficile, chaque conflit, il est là. Il soigne ce que personne d'autre ne prend en charge — les blessures chroniques, les états que les joueurs ne savent pas nommer, les séquelles que la médecine officielle balaie.</p>
+          <p class="perso-excerpt">Il ne s'installe pas dans un cabinet et n'attend pas. Après chaque mission difficile, chaque conflit, il est là. Il soigne ce que personne d'autre ne prend en charge : les blessures chroniques, les états que les joueurs ne savent pas nommer, les séquelles que la médecine officielle balaie.</p>
           <div class="perso-expand-toggle">Voir le détail <span class="arr">↓</span></div>
         </div>
         <div class="perso-expand">
           <p class="perso-section-title">Direction artistique</p>
           <p>Mains marquées de teintures végétales. Sacoches de terrain remplies de ressources du désert profond. Un carnet dense de formules et d'observations. Ce qui le trahit : l'odeur subtile des plantes qu'il macère, toujours.</p>
           <p class="perso-section-title">Caractère</p>
-          <p>Calme, précis, patient comme le désert lui-même. Il observe avant de diagnostiquer. Ne juge pas ce qu'il voit. Sa médecine n'est pas une science froide — c'est un acte de connexion avec ce qui est vivant.</p>
+          <p>Calme, précis, patient comme le désert lui-même. Il observe avant de diagnostiquer. Ne juge pas ce qu'il voit. Sa médecine n'est pas une science froide, c'est un acte de connexion avec ce qui est vivant.</p>
           <div class="obj-horizon">
             <h5>Court terme</h5>
             <ul><li>Mener la première expédition de récolte dans le désert</li><li>Intégrer la section scientifique et s'y faire une place</li><li>Développer un premier traitement exclusivement Saraji</li></ul>
@@ -501,26 +482,26 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
         </div>
       </div>
 
-      <!-- SAGE -->
+      <!-- LA VOIX -->
       <div class="perso-card reveal" onclick="toggleCard(this)">
         <div class="perso-card-front">
           <span class="perso-badge">Philosophe</span>
-          <h3>Le Sage</h3>
-          <p class="perso-role">La Voix. Le silence.</p>
-          <div class="perso-keywords"><span>Extravagant</span><span>Précis</span><span>La Voix du désert</span></div>
-          <p class="perso-excerpt">Quand il prend la parole dans un espace, quelque chose change. Pas le volume — la densité. Ses mots sont choisis, posés, et arrivent avec le poids de quelqu'un qui a réfléchi à chaque syllabe avant de l'utiliser. Au Silence du Coucher, il est le dernier à rouvrir les yeux.</p>
+          <h3>La Voix</h3>
+          <p class="perso-role">Le verbe. Le silence.</p>
+          <div class="perso-keywords"><span>Extravagant</span><span>Précis</span><span>Voix du désert</span></div>
+          <p class="perso-excerpt">Quand il prend la parole dans un espace, quelque chose change. Pas le volume, la densité. Ses mots sont choisis, posés, et arrivent avec le poids de quelqu'un qui a réfléchi à chaque syllabe avant de l'utiliser. Au Silence du Coucher, il est le dernier à rouvrir les yeux.</p>
           <div class="perso-expand-toggle">Voir le détail <span class="arr">↓</span></div>
         </div>
         <div class="perso-expand">
           <p class="perso-section-title">Direction artistique</p>
-          <p>Robes amples aux couleurs du désert brûlé — safran, ocre, noir de nuit. Des encres sur les mains et avant-bras : certaines rituelles, d'autres des mots écrits directement sur la peau. Un registre usé, rempli de bords à bords.</p>
+          <p>Robes amples aux couleurs du désert brûlé : safran, ocre, noir de nuit. Des encres sur les mains et avant-bras, certaines rituelles, d'autres des mots écrits directement sur la peau. Un registre usé, rempli de bords à bords.</p>
           <p class="perso-section-title">Caractère</p>
-          <p>Il capte l'attention sans la chercher. Son humour est rare, sec, parfaitement calibré. Avec les joueurs en difficulté, il ne console pas — il nomme. Il trouve les mots que l'autre cherchait sans les trouver.</p>
+          <p>Il capte l'attention sans la chercher. Son humour est rare, sec, parfaitement calibré. Avec les joueurs en difficulté, il ne console pas : il nomme. Il trouve les mots que l'autre cherchait sans les trouver.</p>
           <div class="obj-horizon">
             <h5>Court terme</h5>
-            <ul><li>Créer Les Veillées du Sable — rassemblement public régulier</li><li>Lancer Les Prophéties du Sable — textes affichés et débattus</li><li>Codifier le Feu de Vérité comme espace diplomatique</li></ul>
+            <ul><li>Créer Les Veillées du Sable, rassemblement public régulier</li><li>Lancer Les Prophéties du Sable, textes affichés et débattus</li><li>Codifier le Feu de Vérité comme espace diplomatique</li></ul>
             <h5>Mid terme</h5>
-            <ul><li>Imposer les Veillées comme espace politique incontournable</li><li>Créer Le Cercle des Souffles — initiation Senjutsu ouverte</li></ul>
+            <ul><li>Imposer les Veillées comme espace politique incontournable</li><li>Créer Le Cercle des Souffles, initiation Senjutsu ouverte</li></ul>
             <h5>Long terme</h5>
             <ul><li>Faire des Veillées du Sable une institution permanente de Suna</li><li>Laisser une génération de joueurs qui pensent comme des Saraji</li></ul>
           </div>
@@ -534,14 +515,14 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
           <h3>Le Stratège</h3>
           <p class="perso-role">La lecture du terrain. La transmission.</p>
           <div class="perso-keywords"><span>Sérieux</span><span>Intraitable</span><span>Formateur</span></div>
-          <p class="perso-excerpt">Il porte le désert sur lui — pas comme une esthétique, comme une réalité. Dès les premières missions, il opère différemment : lecture du terrain avant chaque engagement, repositionnement de l'équipe selon la géographie. Ces choix sont visibles, explicables, et génèrent immédiatement des discussions.</p>
+          <p class="perso-excerpt">Il porte le désert sur lui, pas comme une esthétique, comme une réalité. Dès les premières missions, il opère différemment : lecture du terrain avant chaque engagement, repositionnement de l'équipe selon la géographie. Ces choix sont visibles, explicables, et génèrent immédiatement des discussions.</p>
           <div class="perso-expand-toggle">Voir le détail <span class="arr">↓</span></div>
         </div>
         <div class="perso-expand">
           <p class="perso-section-title">Direction artistique</p>
-          <p>Tenue fonctionnelle, sobre, sans ornement inutile. Tissu de désert enroulé — pas un accessoire, quelque chose qui sert. Ce qui le distingue dans une foule : sa posture. Il observe avant de parler. Dos au mur, face à l'entrée. Il lit les espaces comme des terrains de mission.</p>
+          <p>Tenue fonctionnelle, sobre, sans ornement inutile. Tissu de désert enroulé, pas un accessoire, quelque chose qui sert. Ce qui le distingue dans une foule : sa posture. Il observe avant de parler. Dos au mur, face à l'entrée. Il lit les espaces comme des terrains de mission.</p>
           <p class="perso-section-title">Caractère</p>
-          <p>Avenant parce qu'il est sincèrement intéressé par les gens. Il écoute vraiment, retient tout. Avec les jeunes et les moins expérimentés, il est particulièrement attentif — jamais condescendant. Il suit les ordres — et propose systématiquement mieux.</p>
+          <p>Avenant parce qu'il est sincèrement intéressé par les gens. Il écoute vraiment, retient tout. Avec les jeunes et les moins expérimentés, il est particulièrement attentif, jamais condescendant. Il suit les ordres et propose systématiquement mieux.</p>
           <div class="obj-horizon">
             <h5>Court terme</h5>
             <ul><li>Intégrer la section militaire et se faire remarquer dès les premières missions</li><li>Cartographier les approches désert de Suna</li><li>Initier des sessions de transmission avec les plus jeunes</li></ul>
@@ -553,28 +534,28 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
         </div>
       </div>
 
-      <!-- PISTEUR -->
+      <!-- LE GARDIEN -->
       <div class="perso-card reveal" onclick="toggleCard(this)">
         <div class="perso-card-front">
           <span class="perso-badge">Éclaireur</span>
-          <h3>Le Pisteur</h3>
+          <h3>Le Gardien</h3>
           <p class="perso-role">L'épreuve. L'honneur.</p>
-          <div class="perso-keywords"><span>Impitoyable</span><span>Juste</span><span>Épreuve vivante</span></div>
-          <p class="perso-excerpt">Il ne dit pas ce qu'il pense de vous. Il vous met à l'épreuve pour le savoir. Un courage qui n'a pas été testé n'existe pas — c'est un postulat qu'il vit. Chaque joueur qu'il croise finit par comprendre qu'une rencontre avec lui n'est jamais anodine.</p>
+          <div class="perso-keywords"><span>Impitoyable</span><span>Juste</span><span>Mémoire des actes</span></div>
+          <p class="perso-excerpt">Il ne dit pas ce qu'il pense de vous. Il vous met à l'épreuve pour le savoir. Un courage qui n'a pas été testé n'existe pas, c'est un postulat qu'il vit. Chaque joueur qu'il croise finit par comprendre qu'une rencontre avec lui n'est jamais anodine.</p>
           <div class="perso-expand-toggle">Voir le détail <span class="arr">↓</span></div>
         </div>
         <div class="perso-expand">
           <p class="perso-section-title">Direction artistique</p>
-          <p>Silhouette sèche, économe dans ses mouvements. Tenue de désert fonctionnelle, usée par le terrain — jamais d'ornement sauf une corde tressée au poignet qui sert à marquer ses épreuves passées. Regard direct, sans indulgence. Il ne sourit que quand quelqu'un a mérité ce sourire.</p>
+          <p>Silhouette sèche, économe dans ses mouvements. Tenue de désert fonctionnelle, usée par le terrain, jamais d'ornement sauf une corde tressée au poignet qui marque ses épreuves passées. Regard direct, sans indulgence. Il ne sourit que quand quelqu'un a mérité ce sourire.</p>
           <p class="perso-section-title">Caractère</p>
-          <p>Il n'est pas cruel — il est exigeant. La nuance est essentielle et il la tient. Il ne teste pas pour blesser, il teste pour savoir. Pour lui-même autant que pour l'autre. Ce qui le rend attachant : quand quelqu'un passe l'épreuve, le Pisteur devient le plus fiable des alliés — un lien forgé, pas assumé. Ce qui le rend difficile : il ne fait pas de concession sur ce qu'il considère comme la vérité d'un acte. Un mensonge détecté, une lâcheté observée — ça ne s'efface pas. La dette d'honneur est longue chez lui.</p>
+          <p>Il n'est pas cruel, il est exigeant. La nuance est essentielle et il la tient. Il ne teste pas pour blesser, il teste pour savoir. Pour lui-même autant que pour l'autre. Ce qui le rend attachant : quand quelqu'un passe l'épreuve, le Gardien devient le plus fiable des alliés, un lien forgé, pas assumé. Ce qui le rend difficile : il ne fait pas de concession sur ce qu'il considère comme la vérité d'un acte. Un mensonge détecté, une lâcheté observée, ça ne s'efface pas. La dette d'honneur est longue chez lui.</p>
           <div class="obj-horizon">
             <h5>Court terme</h5>
-            <ul><li>S'établir comme éclaireur de référence pour les missions désert</li><li>Créer le premier protocole d'épreuve Saraji — formalisé, transmissible</li><li>Tester les alliés potentiels de la famille avant tout pacte officiel</li><li>Cartographier les zones extérieures à Suna que personne d'autre n'explore</li></ul>
+            <ul><li>S'établir comme éclaireur de référence pour les missions désert</li><li>Créer le premier protocole d'épreuve Saraji, formalisé et transmissible</li><li>Tester les alliés potentiels de la famille avant tout pacte officiel</li><li>Cartographier les zones extérieures à Suna que personne d'autre n'explore</li></ul>
             <h5>Mid terme</h5>
-            <ul><li>Imposer l'épreuve d'honneur comme rituel d'entrée dans le réseau Saraji</li><li>Devenir la mémoire des actes — qui a tenu sa parole, qui a flanché</li><li>Former des éclaireurs capables de lire le désert comme lui</li></ul>
+            <ul><li>Imposer l'épreuve d'honneur comme rituel d'entrée dans le réseau Saraji</li><li>Devenir la mémoire des actes, qui a tenu sa parole, qui a flanché</li><li>Former des éclaireurs capables de lire le désert comme lui</li></ul>
             <h5>Long terme</h5>
-            <ul><li>Faire reconnaître l'épreuve Saraji comme standard de validation dans les alliances de Suna</li><li>Laisser un code de l'honneur écrit — transmissible à ceux qui viendront après</li></ul>
+            <ul><li>Faire reconnaître l'épreuve Saraji comme standard de validation dans les alliances de Suna</li><li>Laisser un code de l'honneur écrit, transmissible à ceux qui viendront après</li></ul>
           </div>
         </div>
       </div>
@@ -614,7 +595,7 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
 
       <div class="hrp-card">
         <p class="hrp-pseudo">Baylor</p>
-        <p class="hrp-perso">Le Sage</p>
+        <p class="hrp-perso">La Voix</p>
         <span class="hrp-tag">+1000h NRP</span>
         <span class="hrp-tag">Conseil du Feu</span>
         <span class="hrp-tag">Clan Yotsuki</span>
@@ -632,7 +613,7 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
 
       <div class="hrp-card">
         <p class="hrp-pseudo">Parkoureur</p>
-        <p class="hrp-perso">Le Pisteur</p>
+        <p class="hrp-perso">Le Gardien</p>
         <span class="hrp-tag">+1000h NRP</span>
         <span class="hrp-tag">Diplomatie</span>
         <span class="hrp-tag">Clan Chinoike</span>
@@ -651,7 +632,6 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
 </footer>
 
 <script>
-// PARTICLES
 const canvas = document.getElementById('particles');
 const ctx = canvas.getContext('2d');
 let W, H, parts = [];
@@ -673,11 +653,9 @@ function animParts(){
 }
 animParts();
 
-// SCROLL REVEAL
 const obs = new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-// NAV DOTS
 const sections = ['hero','histoire','identite','rituels','relations','objectifs','personnages','hrp'];
 const labels = ['Accueil','Histoire','Identité','Rituels','Relations','La Voie','Les Cinq','HRP'];
 const dotTrack = document.getElementById('dotTrack');
@@ -697,7 +675,6 @@ const sObs = new IntersectionObserver((entries)=>{
 },{threshold:.4});
 sections.forEach(id=>{const s=document.getElementById(id);if(s)sObs.observe(s)});
 
-// CARD TOGGLE
 function toggleCard(card){
   const wasOpen = card.classList.contains('open');
   document.querySelectorAll('.perso-card.open').forEach(c=>c.classList.remove('open'));
