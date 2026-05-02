@@ -51,7 +51,6 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .quote{font-family:'Crimson Pro',serif;font-style:italic;font-size:1.4rem;color:var(--sand-light);line-height:1.6;border-left:2px solid var(--sand);padding-left:1.5rem;margin:2rem 0}
 .saraji-word{font-style:italic;color:var(--sand-light);letter-spacing:.1em;font-size:.95em}
 
-/* HERO */
 #hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 2rem;background:radial-gradient(ellipse at center,rgba(122,79,30,0.15) 0%,transparent 70%)}
 .hero-sub{font-family:'Cinzel',serif;font-size:clamp(.7rem,1.5vw,1rem);letter-spacing:.4em;color:var(--sand-light);text-transform:uppercase;margin-top:1.5rem;opacity:.9}
 .hero-quote{font-style:italic;font-size:clamp(.9rem,1.5vw,1.2rem);color:rgba(240,232,216,0.6);margin-top:2.5rem;max-width:600px;line-height:1.8}
@@ -60,14 +59,12 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .scroll-arr{width:1px;height:40px;background:linear-gradient(to bottom,var(--sand),transparent)}
 @keyframes pulse{0%,100%{opacity:.5;transform:translateY(0)}50%{opacity:1;transform:translateY(5px)}}
 
-/* HISTOIRE */
 #histoire{background:var(--night2)}
 .histoire-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
 .desert-ornament{display:flex;flex-direction:column;align-items:center;gap:1rem;opacity:.4;padding-top:2rem}
 .desert-ornament svg{width:100%;max-width:300px}
 .tribal-tag{display:inline-block;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;border:1px solid rgba(200,136,42,0.3);color:var(--sand);padding:.3rem .8rem;margin-bottom:1.5rem}
 
-/* IDENTITE */
 #identite{background:var(--night)}
 .identite-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:3rem}
 .identite-card{border:1px solid var(--border);background:var(--overlay);padding:2rem;position:relative;overflow:hidden;transition:border-color .3s}
@@ -78,7 +75,6 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .identite-card h4{font-family:'Cinzel',serif;font-size:.85rem;letter-spacing:.15em;color:var(--sand);text-transform:uppercase;margin-bottom:.75rem}
 .identite-card p{font-size:1rem;line-height:1.7;color:rgba(240,232,216,0.7);font-weight:300}
 
-/* RITUELS */
 #rituels{background:var(--night2)}
 .rituels-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:3rem}
 .rituel-card{border:1px solid var(--border);background:rgba(10,8,4,0.8);padding:2.5rem 2rem;text-align:center;transition:all .4s;cursor:default;position:relative}
@@ -87,7 +83,6 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .rituel-card h4{font-family:'Cinzel',serif;font-size:.9rem;letter-spacing:.15em;color:var(--sand-light);text-transform:uppercase;margin-bottom:1rem}
 .rituel-card p{font-size:.95rem;line-height:1.7;color:rgba(240,232,216,0.65);font-weight:300}
 
-/* SENJUTSU */
 #senjutsu{background:var(--night);overflow:hidden}
 .senj-wrapper{position:relative;display:flex;flex-direction:column;align-items:center;padding:2rem 0 4rem}
 .senj-title-block{position:relative;text-align:center;margin-bottom:4rem}
@@ -98,7 +93,6 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .senj-ring-2{width:450px;height:450px;border:1px solid rgba(200,136,42,0.04);animation:rotate 50s linear infinite reverse}
 .senj-ring-3{width:200px;height:200px;border:1px solid rgba(200,136,42,0.12);animation:rotate 20s linear infinite}
 @keyframes rotate{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
-
 .senj-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2rem;width:100%}
 .senj-pillar{border:1px solid var(--border);background:rgba(10,8,4,0.7);padding:2rem;position:relative;transition:border-color .4s,background .4s}
 .senj-pillar:hover{border-color:var(--border-strong);background:rgba(200,136,42,0.04)}
@@ -107,7 +101,6 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .senj-pillar-num{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.3em;color:rgba(200,136,42,0.3);text-transform:uppercase;margin-bottom:.8rem}
 .senj-pillar h4{font-family:'Cinzel',serif;font-size:.9rem;letter-spacing:.15em;color:var(--sand);text-transform:uppercase;margin-bottom:.8rem}
 .senj-pillar p{font-size:.95rem;line-height:1.7;color:rgba(240,232,216,0.65);font-weight:300}
-
 .senj-objectifs{margin-top:4rem;border:1px solid var(--border);padding:3rem;position:relative;background:rgba(10,8,4,0.5)}
 .senj-objectifs::before{content:'OBJECTIFS SENJUTSU';position:absolute;top:-1px;left:2rem;font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.25em;color:var(--sand);background:var(--night);padding:0 .8rem;transform:translateY(-50%)}
 .senj-obj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:1rem}
@@ -115,7 +108,6 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .senj-obj-item h5{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--sand-light);margin-bottom:.6rem}
 .senj-obj-item p{font-size:.9rem;line-height:1.6;color:rgba(240,232,216,0.6);font-weight:300}
 
-/* RELATIONS */
 #relations{background:var(--night2)}
 .clans-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:2rem}
 .clan-pill{border:1px solid var(--border);padding:1.2rem;text-align:center;transition:border-color .3s}
@@ -130,7 +122,6 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .clan-pill.idole .clan-dot{background:var(--sand);box-shadow:0 0 10px rgba(200,136,42,0.6)}
 .clan-pill.idole{border-color:rgba(200,136,42,0.4);background:rgba(200,136,42,0.04)}
 .clan-pill.idole h5{color:var(--sand-light)}
-
 .apports-list{margin-top:3rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
 .apport-item{display:flex;align-items:flex-start;gap:.75rem;padding:1.2rem;border:1px solid rgba(200,136,42,0.12);transition:border-color .3s,background .3s}
 .apport-item:hover{border-color:rgba(200,136,42,0.25);background:rgba(200,136,42,0.03)}
@@ -138,19 +129,23 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .apport-item p{font-size:.95rem;color:rgba(240,232,216,0.75);line-height:1.6;font-weight:300}
 .apport-item strong{color:var(--sand-light);font-weight:400}
 
-/* OBJECTIFS */
+/* OBJECTIFS FULL */
 #objectifs{background:var(--night)}
-.obj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
-.obj-col{border-top:2px solid var(--border)}
-.obj-col-header{padding:1.5rem 0 1rem;display:flex;align-items:center;gap:.75rem}
-.obj-col-header span{font-size:1.5rem}
-.obj-col-header h4{font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.2em;color:var(--sand);text-transform:uppercase}
-.obj-list{list-style:none;display:flex;flex-direction:column;gap:.75rem}
-.obj-list li{font-size:.9rem;line-height:1.6;color:rgba(240,232,216,0.7);padding-left:1.2rem;position:relative;font-weight:300}
-.obj-list li::before{content:'·';position:absolute;left:0;color:var(--earth)}
+.obj-full-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;margin-top:3rem}
+.obj-full-col{border-top:2px solid var(--border)}
+.obj-full-header{padding:1.5rem 0 1.2rem;display:flex;align-items:center;gap:.75rem}
+.obj-full-header span{font-size:1.5rem}
+.obj-full-header h4{font-family:'Cinzel',serif;font-size:.8rem;letter-spacing:.2em;color:var(--sand);text-transform:uppercase}
+.obj-entry{margin-bottom:1.8rem;padding-bottom:1.8rem;border-bottom:1px solid rgba(200,136,42,0.08)}
+.obj-entry:last-child{border-bottom:none;margin-bottom:0}
+.obj-entry-title{font-family:'Cinzel',serif;font-size:.75rem;letter-spacing:.12em;color:var(--sand-light);text-transform:uppercase;margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem}
+.obj-entry-emoji{font-size:1rem}
+.obj-entry-body{font-size:.88rem;line-height:1.7;color:rgba(240,232,216,0.65);font-weight:300}
+.obj-entry-bullets{list-style:none;margin-top:.6rem;display:flex;flex-direction:column;gap:.35rem}
+.obj-entry-bullets li{font-size:.85rem;color:rgba(240,232,216,0.6);padding-left:1rem;position:relative;line-height:1.5;font-weight:300}
+.obj-entry-bullets li::before{content:'·';position:absolute;left:0;color:var(--earth)}
 .obj-footer-quote{font-style:italic;font-size:1rem;color:rgba(200,136,42,0.7);text-align:center;margin-top:3rem;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.8}
 
-/* PERSONNAGES */
 #personnages{background:var(--night2)}
 .perso-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:3rem}
 .perso-card{border:1px solid var(--border);background:rgba(15,12,7,0.9);overflow:hidden;cursor:pointer;transition:border-color .3s;position:relative}
@@ -175,7 +170,6 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 .obj-horizon ul li{font-size:.85rem;color:rgba(240,232,216,0.65);padding-left:1rem;position:relative;line-height:1.6;font-weight:300}
 .obj-horizon ul li::before{content:'·';position:absolute;left:0;color:var(--earth)}
 
-/* HRP */
 #hrp{background:var(--night)}
 .hrp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;margin-top:3rem}
 .hrp-card{border:1px solid rgba(200,136,42,0.15);padding:1.8rem;background:rgba(10,8,4,0.6)}
@@ -187,12 +181,11 @@ p.body{font-size:1.1rem;line-height:1.9;color:rgba(240,232,216,0.85);font-weight
 footer{text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);background:var(--night2)}
 footer .footer-logo{font-family:'Cinzel Decorative',serif;font-size:1.5rem;letter-spacing:.3em;color:var(--sand);display:block;margin-bottom:.8rem}
 footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:rgba(200,136,42,0.4);text-transform:uppercase}
-
 .highlight-line{display:block;width:100%;height:1px;background:linear-gradient(to right,transparent,rgba(200,136,42,0.4),transparent);margin:3rem 0}
 
 @media(max-width:768px){
   .histoire-grid{grid-template-columns:1fr}.desert-ornament{display:none}
-  .obj-grid{grid-template-columns:1fr}
+  .obj-full-grid{grid-template-columns:1fr}
   .senj-pillars{grid-template-columns:1fr}
   .senj-obj-grid{grid-template-columns:1fr}
   .nav-links{display:none}
@@ -246,7 +239,6 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
         <span class="tribal-tag">Tribu nomade · Désert profond</span>
         <h2 class="section-title">L'Histoire</h2>
         <div class="sep-sm"></div>
-
         <p class="body">Dans le désert profond, là où les cartes s'arrêtent et où le soleil tue, une tribu a survécu depuis des temps immémoriaux. Les Saraji ne comptent pas les années. <strong style="color:var(--sand-light);font-weight:500">Ils comptent les tempêtes.</strong></p>
         <br>
         <p class="body">Pas de murs. Pas de trônes. Pas de dieux gravés dans la pierre. Ils vivent dans les tentes, dorment sous les étoiles, suivent les courants d'air chaud et lisent le sable comme d'autres lisent des cartes de guerre. Leur chef, c'est celui que le désert reconnaît. Leur loi, c'est la survie collective. Leur religion, c'est l'écoute.</p>
@@ -370,7 +362,6 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
 <section id="senjutsu">
   <div class="section-inner">
     <div class="senj-wrapper reveal">
-
       <div class="senj-title-block">
         <div class="senj-ring senj-ring-3"></div>
         <div class="senj-ring"></div>
@@ -379,7 +370,6 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
         <h2 class="senj-main-title filled">SENJUTSU</h2>
         <p class="senj-sub" style="margin-top:.8rem;position:relative;z-index:2">Saraji · Désert profond · Énergie aride</p>
       </div>
-
       <div class="senj-pillars">
         <div class="senj-pillar">
           <p class="senj-pillar-num">01 · Le Sable</p>
@@ -397,7 +387,6 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
           <p>Les Saraji ne croient pas que les morts disparaissent. Ils deviennent énergie naturelle, sable, vent, chaleur diffuse. Le Senjutsu Saraji est indissociable de cette croyance : puiser dans l'énergie naturelle du désert, c'est puiser dans ce que les ancêtres ont laissé. Cette dimension spirituelle donne au Senjutsu Saraji une profondeur que les autres voies n'ont pas.</p>
         </div>
       </div>
-
       <div class="senj-objectifs">
         <div class="senj-obj-grid">
           <div class="senj-obj-item">
@@ -414,7 +403,6 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -454,9 +442,7 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
         <div class="clan-dot"></div>
       </div>
     </div>
-
     <div class="highlight-line"></div>
-
     <div class="reveal">
       <h3 class="sub-title">Ce qu'on apporte à Suna</h3>
       <p class="body" style="max-width:720px;margin-bottom:2rem">Les Saraji sont une famille tournée vers le peuple. Chaque pratique, chaque rituel, chaque compétence est ouverte aux autres joueurs. L'objectif est d'embarquer un maximum de gens dans nos initiatives, de créer du jeu autour de nous plutôt que de jouer entre nous.</p>
@@ -498,46 +484,121 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
       <div class="sep-sm"></div>
       <p class="body" style="max-width:650px">Trois horizons. Un projet collectif construit brique par brique, en jeu, par les actes. Jamais par la demande.</p>
     </div>
-    <div class="obj-grid reveal">
-      <div class="obj-col">
-        <div class="obj-col-header">
+
+    <div class="obj-full-grid reveal">
+
+      <!-- COURT TERME -->
+      <div class="obj-full-col">
+        <div class="obj-full-header">
           <span>🔥</span>
           <h4>Court terme</h4>
         </div>
-        <ul class="obj-list">
-          <li>Cellule médicale d'urgence après chaque incident visible</li>
-          <li>Première lecture du sable publique autour d'une tension réelle</li>
-          <li>Pacte de service formalisé avec une première famille</li>
-          <li>Infiltration des cercles d'information du village</li>
-          <li>Cadre d'échange de savoirs avec une autre famille</li>
-        </ul>
+
+        <div class="obj-entry">
+          <div class="obj-entry-title"><span class="obj-entry-emoji">🏛️</span>Confronter Suna à ses origines tribales</div>
+          <div class="obj-entry-body">Les Saraji ne prêchent pas, ils questionnent. Chaque membre engage des conversations ciblées avec les joueurs de tous grades : pourquoi certains clans ont plus de poids que d'autres, ce que le système ninja a remplacé, ce qu'il a perdu en chemin. Ces questions sont posées avec la curiosité sincère d'enfants du désert. Les hauts gradés sont sollicités pour développer la philosophie du village. Certaines remises en question seront maladroites, sanctionnables. Ce loose RP assumé fait partie du chemin.</div>
+        </div>
+
+        <div class="obj-entry">
+          <div class="obj-entry-title"><span class="obj-entry-emoji">🔥</span>Promouvoir les rituels Saraji comme activités ouvertes</div>
+          <div class="obj-entry-body">Le Feu de Vérité, la Lecture du Sable, le Silence du Coucher, la Marque du Passage ne restent pas entre la famille. Des expéditions régulières dans le désert pour lire le sable avec des participants extérieurs. Des soirées autour du feu avec des invités. Des lectures proposées à ceux qui traversent quelque chose de difficile. L'objectif est de créer des expériences mémorables qui associent les Saraji à des moments forts dans la vie des autres joueurs.</div>
+        </div>
+
+        <div class="obj-entry">
+          <div class="obj-entry-title"><span class="obj-entry-emoji">🌀</span>Se sensibiliser au Senjutsu et emmener d'autres joueurs</div>
+          <div class="obj-entry-body">La connexion Saraji à l'énergie naturelle du désert se vit et s'enseigne. Des sessions ouvertes de méditation désert, de lecture du vent, de présence dans l'environnement naturel. L'idée transmise est simple : comprendre ce qui vous entoure avant d'essayer de le dominer. Ces sessions attirent des joueurs curieux, certains sceptiques, d'autres sincèrement touchés. La démarche Senjutsu Saraji commence à exister dans le village comme une invitation permanente.</div>
+        </div>
+
+        <div class="obj-entry">
+          <div class="obj-entry-title"><span class="obj-entry-emoji">🏜️</span>Organiser des expéditions de génins dans le désert</div>
+          <div class="obj-entry-body">Des sorties hors les murs ouvertes aux génins de Suna : explorer, cartographier, parler à la belle étoile, raconter des histoires autour d'un feu de camp, apprendre à lire le désert, faire de la musique ensemble. Ces expéditions ne sont pas des missions, ce sont des aventures sans enjeu de grade qui créent des liens entre joueurs d'une même génération. Les Saraji y sont les guides naturels mais pas les chefs. Égaux dans le désert la nuit.</div>
+        </div>
+
+        <div class="obj-entry">
+          <div class="obj-entry-title"><span class="obj-entry-emoji">🤝</span>Être la jeune famille qui fait les petits boulots de tout le village</div>
+          <div class="obj-entry-body">Les Saraji ne réclament pas de statut. Ils s'imposent par l'utilité. Livraisons, escortes légères, transmission de messages, aide aux marchands. Ils proposent leurs services à des familles établies, à des hauts gradés, à des commerçants, en échange de petits accords simples qui créent des obligations mutuelles. Chaque boulot modeste est une occasion de présence dans un espace du village où une famille mineure n'aurait normalement pas accès.</div>
+        </div>
       </div>
-      <div class="obj-col">
-        <div class="obj-col-header">
+
+      <!-- MID TERME -->
+      <div class="obj-full-col">
+        <div class="obj-full-header">
           <span>☀️</span>
           <h4>Mid terme</h4>
         </div>
-        <ul class="obj-list">
-          <li>Réseau de veille centralisé sur tout ce qui vient du désert</li>
-          <li>Confrontation institutionnelle sur la médecine, cas public</li>
-          <li>Trois alliances politiques actives avec obligations mutuelles</li>
-          <li>Progression vers le Senjutsu, visible et désirable pour le village</li>
-          <li>Place négociée dans les décisions stratégiques désert de Suna</li>
-        </ul>
+
+        <div class="obj-entry">
+          <div class="obj-entry-title"><span class="obj-entry-emoji">⚔️</span>Chaque membre s'impose dans sa section avec la touche Saraji</div>
+          <div class="obj-entry-body">Le Soignant dans la section médicale. Le Stratège dans la section militaire. La Voix dans les cercles diplomatiques et à l'Académie. La Tête Brûlée dans les réseaux politiques et sociaux. L'Héritier dans l'éducation et la transmission culturelle. Chaque membre travaille à acquérir du poids dans son domaine en assumant son identité Saraji comme valeur ajoutée. Ce poids individuel additionné dans cinq directions fait des Saraji une famille qui compte bien au-delà de leur statut officiel.</div>
+        </div>
+
+        <div class="obj-entry">
+          <div class="obj-entry-title"><span class="obj-entry-emoji">🗺️</span>Devenir la référence absolue sur tout ce qui concerne le désert</div>
+          <div class="obj-entry-body">Les expéditions se multiplient, les informations remontées se révèlent justes, les missions guidées se succèdent. La famille formalise cette position : propositions d'escorte pour les missions extérieures, stages de survie structurés, cartographie progressive des zones que personne d'autre n'a explorées. Quand quelque chose se passe hors des murs, les Saraji sont dans la conversation. C'est leur territoire naturel, et tout le village finit par le savoir.</div>
+        </div>
+
+        <div class="obj-entry">
+          <div class="obj-entry-title"><span class="obj-entry-emoji">🔮</span>Ouvrir l'Échoppe du Sable — prémonition, lecture, informations</div>
+          <div class="obj-entry-body">La famille ouvre un espace public dédié à la lecture du sable, à la prémonition et aux rituels de connaissance. Des séances régulières où des joueurs viennent poser des questions sur leur avenir, leurs choix, leurs missions. Ces informations partagées peuvent être troquées, utilisées, transmises. L'Échoppe peut aussi servir d'outil pour les animateurs du serveur : les Saraji reçoivent des indices sur des trames en cours et les redistribuent de façon cryptique à travers leurs lectures.</div>
+        </div>
+
+        <div class="obj-entry">
+          <div class="obj-entry-title"><span class="obj-entry-emoji">🕸️</span>Devenir un groupe à tout faire — les hommes de mains de Suna</div>
+          <div class="obj-entry-body">Les petits boulots du court terme deviennent des accords structurés. La famille construit des partenariats avec les clans, les familles influentes et les structures du village : en échange de services concrets, les Saraji reçoivent des ressources, de la protection, de l'accès et du poids politique. Ces partenariats multiples créent une famille qui ne peut pas être ignorée parce que trop de gens lui doivent quelque chose ou ont besoin de quelque chose qu'elle seule peut fournir.</div>
+        </div>
+
+        <div class="obj-entry">
+          <div class="obj-entry-title"><span class="obj-entry-emoji">🏆</span>Organiser les Épreuves du Désert</div>
+          <div class="obj-entry-body">La famille conçoit un événement complet ouvert à tous les joueurs de Suna : survie en conditions réelles, orientation sans instrument, lecture du sable, respect des codes tribaux, récits autour du feu, épreuves physiques adaptées au terrain désert. Les participants qui complètent les épreuves reçoivent une reconnaissance formelle des Saraji : une marque rituelle, un titre tribal. Cet événement positionne les Saraji comme organisateurs d'un moment fort de la vie ninja de Suna.</div>
+        </div>
       </div>
-      <div class="obj-col">
-        <div class="obj-col-header">
+
+      <!-- LONG TERME -->
+      <div class="obj-full-col">
+        <div class="obj-full-header">
           <span>✦</span>
           <h4>Long terme</h4>
         </div>
-        <ul class="obj-list">
-          <li>Méthodes Saraji intégrées à la section médicale officielle</li>
-          <li>Doctrine désert adoptée dans la stratégie militaire de Suna</li>
-          <li>Le Senjutsu Saraji, voie formalisée et transmissible</li>
-          <li>Cours de survie désert au programme de l'Académie</li>
-          <li>Reconnaissance comme clan officiel de Suna</li>
-        </ul>
+
+        <div class="obj-entry">
+          <div class="obj-entry-title"><span class="obj-entry-emoji">⚡</span>Devenir la référence du Senjutsu et en faire un héritage</div>
+          <div class="obj-entry-body">La maîtrise collective atteinte progressivement, scène après scène, jamais déclarée d'un coup. Une fois formalisée, elle est enseignée. Les nouvelles générations de Suna apprennent le Senjutsu du désert dans le cadre d'une transmission liée à la culture tribale Saraji — technique et philosophie sont indissociables. Apprendre le Senjutsu Saraji, c'est apprendre à respecter le désert, à écouter les ancêtres, à se taire assez longtemps pour que quelque chose réponde.</div>
+        </div>
+
+        <div class="obj-entry">
+          <div class="obj-entry-title"><span class="obj-entry-emoji">🏛️</span>Que chaque membre ait accompli son objectif dans sa section</div>
+          <ul class="obj-entry-bullets">
+            <li><strong style="color:var(--sand-light)">Le Soignant</strong> — Une unité médicale d'élite du désert opérationnelle, reconnue par la section médicale officielle, avec ses propres techniques et ses praticiens formés.</li>
+            <li><strong style="color:var(--sand-light)">L'Héritier</strong> — Des cours d'histoire tribale intégrés au cursus de l'Académie. Les élèves de Suna apprennent leurs racines désert. Les ancêtres sont nommés dans les textes officiels.</li>
+            <li><strong style="color:var(--sand-light)">Le Stratège</strong> — La philosophie guerrière du désert ancrée dans la doctrine tactique de Suna. Toute opération extérieure majeure intègre une lecture Saraji du terrain.</li>
+            <li><strong style="color:var(--sand-light)">La Voix</strong> — Des événements inter-villages liés à la culture tribale devenus incontournables. Un cabinet de soin psychologique reconnu par la section médicale.</li>
+            <li><strong style="color:var(--sand-light)">La Tête Brûlée</strong> — Un réseau diplomatique inter-village actif et une reconnaissance comme diplomate de référence par la hiérarchie de Suna.</li>
+          </ul>
+        </div>
+
+        <div class="obj-entry">
+          <div class="obj-entry-title"><span class="obj-entry-emoji">🌍</span>Organiser un événement inter-village autour de la culture désert</div>
+          <div class="obj-entry-body">Les Saraji ont établi des connexions au-delà de Suna. Ils organisent un événement inter-village construit autour de la culture du désert profond : épreuves, échanges de savoirs, cérémonies tribales ouvertes à des joueurs d'autres villages. Cet événement positionne Suna comme gardienne d'une culture désert que les autres villages n'ont pas — et les Saraji comme les architectes de ce positionnement.</div>
+        </div>
+
+        <div class="obj-entry">
+          <div class="obj-entry-title"><span class="obj-entry-emoji">🏕️</span>Établir un avant-poste Saraji dans le désert de Suna</div>
+          <div class="obj-entry-body">La famille identifie un point stratégique dans le désert et y établit un avant-poste permanent. Pas un village — un relais avec des services concrets :</div>
+          <ul class="obj-entry-bullets">
+            <li>Point d'eau et de ravitaillement pour les missions extérieures</li>
+            <li>Abri en cas de tempête pour les shinobi hors les murs</li>
+            <li>Point de départ pour les expéditions cartographiques</li>
+            <li>Espace de méditation et de connexion au Senjutsu</li>
+            <li>Lieu de lecture du sable pour ceux qui font le déplacement</li>
+          </ul>
+        </div>
+
+        <div class="obj-entry">
+          <div class="obj-entry-title"><span class="obj-entry-emoji">👑</span>Qu'un Saraji siège dans le haut commandement — par nécessité</div>
+          <div class="obj-entry-body">Personne dans la famille ne demande ce siège. Personne ne le brigue ouvertement. Mais à force d'avoir été indispensables dans la médecine, la tactique, la diplomatie, l'éducation, la connaissance du désert — à force d'avoir rendu trop de services à trop de gens — le moment arrive où ne pas les inclure dans les décisions importantes devient une erreur que Suna ne peut plus se permettre. Ce siège n'est pas pris. Il est offert parce qu'on a enfin compris que le désert était déjà dans le village. Il avait juste besoin qu'on lui ouvre la porte.</div>
+        </div>
       </div>
+
     </div>
     <p class="obj-footer-quote reveal">"On ne demande pas à être reconnus. On crée la situation où ne pas nous reconnaître devient illogique."</p>
   </div>
@@ -787,7 +848,6 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
       <p class="body" style="max-width:650px">Cinq joueurs. Un collectif construit sur des années d'expérience RP commune.</p>
     </div>
     <div class="hrp-grid reveal">
-
       <div class="hrp-card">
         <p class="hrp-pseudo">DLF</p>
         <p class="hrp-perso">La Tête Brûlée</p>
@@ -795,9 +855,8 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
         <span class="hrp-tag">MJ Clan Zenkai</span>
         <span class="hrp-tag">Clan Nara (FSC)</span>
         <span class="hrp-tag">Groupe Tutti Fruitti (Ryukai)</span>
-        <p class="hrp-bio">Chef de section sur NRP (Diplomatie / Stratégie Militaire. Clan Nara, clan Fuma. Co-créateur du groupe Tutti Fruitti sur One Piece RP. Maîtrise narrative du jeu politique long terme.</p>
+        <p class="hrp-bio">Chef de section sur NRP (Diplomatie / Stratégie Militaire). Clan Nara, clan Fuma. Co-créateur du groupe Tutti Fruitti sur One Piece RP. Maîtrise narrative du jeu politique long terme.</p>
       </div>
-
       <div class="hrp-card">
         <p class="hrp-pseudo">Goby</p>
         <p class="hrp-perso">Le Soignant</p>
@@ -807,7 +866,6 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
         <span class="hrp-tag">Chef médical</span>
         <p class="hrp-bio">Chef du clan Nara sur NRP. Chef de section médicale. Clan Fuma. Expertise en gestion de clan et en RP institutionnel long terme.</p>
       </div>
-
       <div class="hrp-card">
         <p class="hrp-pseudo">Baylor</p>
         <p class="hrp-perso">La Voix</p>
@@ -818,7 +876,6 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
         <span class="hrp-tag">Clan Yotsuki (FSC)</span>
         <p class="hrp-bio">Chef de sections sur NRP. Conseil du Feu à Konoha. Co-fondateur des groupes Bosozuku (NRP) et Tutti Fruitti (OPRP). Vision politique large.</p>
       </div>
-
       <div class="hrp-card">
         <p class="hrp-pseudo">Short King</p>
         <p class="hrp-perso">Le Stratège</p>
@@ -829,7 +886,6 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
         <span class="hrp-tag">Clan Chinoike (FSC)</span>
         <p class="hrp-bio">Chef de section diplomatique sur NRP. Personnage de clan Chinoike. Co-fondateur Bosozuku et Tutti Fruitti. Architecture des réseaux inter-clans.</p>
       </div>
-
       <div class="hrp-card">
         <p class="hrp-pseudo">Parkoureur</p>
         <p class="hrp-perso">L'Héritier</p>
@@ -840,7 +896,6 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
         <span class="hrp-tag">Clan Nemuri (FSC)</span>
         <p class="hrp-bio">Chef de section diplomatique sur NRP. Personnage de clan Nemuri. Co-fondateur Bosozuku et Tutti Fruitti. Expertise des dynamiques inter-villages.</p>
       </div>
-
     </div>
   </div>
 </section>
@@ -909,29 +964,21 @@ let sandW, sandH;
 function resizeSand(){sandW=sandCanvas.width=window.innerWidth;sandH=sandCanvas.height=window.innerHeight}
 resizeSand();
 window.addEventListener('resize',resizeSand);
-
 const sandColors = ['#c8882a','#e8c87a','#d4a050','#b87828','#f0d890','#a06020','#dbb060'];
 let sandParticles = [];
 let mouseX = -100, mouseY = -100;
 let lastX = -100, lastY = -100;
-let isMoving = false;
 let moveTimer;
-
 document.addEventListener('mousemove', e => {
   mouseX = e.clientX;
   mouseY = e.clientY;
-  isMoving = true;
   clearTimeout(moveTimer);
-  moveTimer = setTimeout(()=>{ isMoving = false; }, 80);
-
+  moveTimer = setTimeout(()=>{}, 80);
   const dx = mouseX - lastX;
   const dy = mouseY - lastY;
   const speed = Math.sqrt(dx*dx + dy*dy);
   const count = Math.min(Math.floor(speed * 0.6) + 2, 12);
-
   for(let i = 0; i < count; i++){
-    const angle = Math.random() * Math.PI * 2;
-    const spread = Math.random() * 4;
     sandParticles.push({
       x: mouseX + (Math.random()-0.5)*6,
       y: mouseY + (Math.random()-0.5)*6,
@@ -948,16 +995,11 @@ document.addEventListener('mousemove', e => {
   lastX = mouseX;
   lastY = mouseY;
 });
-
-// Cursor dot
 let cursorVisible = false;
 document.addEventListener('mouseenter', ()=>{ cursorVisible = true; });
 document.addEventListener('mouseleave', ()=>{ cursorVisible = false; });
-
 function animSand(){
   sandCtx.clearRect(0,0,sandW,sandH);
-
-  // Draw cursor dot
   if(cursorVisible){
     sandCtx.beginPath();
     sandCtx.arc(mouseX, mouseY, 3, 0, Math.PI*2);
@@ -969,8 +1011,6 @@ function animSand(){
     sandCtx.lineWidth = 1;
     sandCtx.stroke();
   }
-
-  // Draw and update sand particles
   sandParticles = sandParticles.filter(p => p.alpha > 0.01);
   sandParticles.forEach(p => {
     p.vy += p.gravity;
@@ -979,20 +1019,12 @@ function animSand(){
     p.y += p.vy;
     p.alpha -= p.decay;
     p.size *= 0.995;
-
     sandCtx.save();
     sandCtx.globalAlpha = Math.max(0, p.alpha);
     sandCtx.fillStyle = p.color;
-    // Slight rectangular shape for grain of sand feel
-    sandCtx.fillRect(
-      p.x - p.size/2,
-      p.y - p.size/2,
-      p.size + Math.random()*0.5,
-      p.size * 0.7 + Math.random()*0.5
-    );
+    sandCtx.fillRect(p.x - p.size/2, p.y - p.size/2, p.size + Math.random()*0.5, p.size * 0.7 + Math.random()*0.5);
     sandCtx.restore();
   });
-
   requestAnimationFrame(animSand);
 }
 animSand();
