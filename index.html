@@ -14,6 +14,9 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--night);color:var(--sand-pale);font-family:'Crimson Pro',serif;overflow-x:hidden}
+body{cursor:none}
+a,button,[onclick]{cursor:none}
+#sand-cursor{position:fixed;inset:0;pointer-events:none;z-index:998;}
 body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.03;
 background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
 background-size:200px 200px}
@@ -206,6 +209,7 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
 <body>
 
 <canvas id="particles"></canvas>
+<canvas id="sand-cursor"></canvas>
 
 <nav>
   <a href="#hero" class="nav-logo">SARAJI</a>
@@ -798,6 +802,7 @@ footer p{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.25em;color:r
         <p class="hrp-pseudo">Goby</p>
         <p class="hrp-perso">Le Soignant</p>
         <span class="hrp-tag">+1000h NRP</span>
+        <span class="hrp-tag">Chef de clan Nara (FSC)</span>
         <span class="hrp-tag">MJ Zenkai</span>
         <span class="hrp-tag">Chef médical</span>
         <p class="hrp-bio">Chef du clan Nara sur NRP. Chef de section médicale. Clan Fuma. Expertise en gestion de clan et en RP institutionnel long terme.</p>
@@ -896,6 +901,101 @@ function toggleCard(card){
   document.querySelectorAll('.perso-card.open').forEach(c=>c.classList.remove('open'));
   if(!wasOpen)card.classList.add('open');
 }
+
+// SAND CURSOR
+const sandCanvas = document.getElementById('sand-cursor');
+const sandCtx = sandCanvas.getContext('2d');
+let sandW, sandH;
+function resizeSand(){sandW=sandCanvas.width=window.innerWidth;sandH=sandCanvas.height=window.innerHeight}
+resizeSand();
+window.addEventListener('resize',resizeSand);
+
+const sandColors = ['#c8882a','#e8c87a','#d4a050','#b87828','#f0d890','#a06020','#dbb060'];
+let sandParticles = [];
+let mouseX = -100, mouseY = -100;
+let lastX = -100, lastY = -100;
+let isMoving = false;
+let moveTimer;
+
+document.addEventListener('mousemove', e => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  isMoving = true;
+  clearTimeout(moveTimer);
+  moveTimer = setTimeout(()=>{ isMoving = false; }, 80);
+
+  const dx = mouseX - lastX;
+  const dy = mouseY - lastY;
+  const speed = Math.sqrt(dx*dx + dy*dy);
+  const count = Math.min(Math.floor(speed * 0.6) + 2, 12);
+
+  for(let i = 0; i < count; i++){
+    const angle = Math.random() * Math.PI * 2;
+    const spread = Math.random() * 4;
+    sandParticles.push({
+      x: mouseX + (Math.random()-0.5)*6,
+      y: mouseY + (Math.random()-0.5)*6,
+      vx: (Math.random()-0.5)*1.2 + dx*0.04,
+      vy: Math.random()*1.5 + 0.4,
+      size: Math.random()*2.2 + 0.6,
+      alpha: Math.random()*0.7 + 0.3,
+      decay: Math.random()*0.018 + 0.012,
+      color: sandColors[Math.floor(Math.random()*sandColors.length)],
+      gravity: 0.06 + Math.random()*0.04,
+      wobble: (Math.random()-0.5)*0.08
+    });
+  }
+  lastX = mouseX;
+  lastY = mouseY;
+});
+
+// Cursor dot
+let cursorVisible = false;
+document.addEventListener('mouseenter', ()=>{ cursorVisible = true; });
+document.addEventListener('mouseleave', ()=>{ cursorVisible = false; });
+
+function animSand(){
+  sandCtx.clearRect(0,0,sandW,sandH);
+
+  // Draw cursor dot
+  if(cursorVisible){
+    sandCtx.beginPath();
+    sandCtx.arc(mouseX, mouseY, 3, 0, Math.PI*2);
+    sandCtx.fillStyle = 'rgba(200,136,42,0.9)';
+    sandCtx.fill();
+    sandCtx.beginPath();
+    sandCtx.arc(mouseX, mouseY, 6, 0, Math.PI*2);
+    sandCtx.strokeStyle = 'rgba(200,136,42,0.3)';
+    sandCtx.lineWidth = 1;
+    sandCtx.stroke();
+  }
+
+  // Draw and update sand particles
+  sandParticles = sandParticles.filter(p => p.alpha > 0.01);
+  sandParticles.forEach(p => {
+    p.vy += p.gravity;
+    p.vx += p.wobble;
+    p.x += p.vx;
+    p.y += p.vy;
+    p.alpha -= p.decay;
+    p.size *= 0.995;
+
+    sandCtx.save();
+    sandCtx.globalAlpha = Math.max(0, p.alpha);
+    sandCtx.fillStyle = p.color;
+    // Slight rectangular shape for grain of sand feel
+    sandCtx.fillRect(
+      p.x - p.size/2,
+      p.y - p.size/2,
+      p.size + Math.random()*0.5,
+      p.size * 0.7 + Math.random()*0.5
+    );
+    sandCtx.restore();
+  });
+
+  requestAnimationFrame(animSand);
+}
+animSand();
 </script>
 </body>
 </html>
